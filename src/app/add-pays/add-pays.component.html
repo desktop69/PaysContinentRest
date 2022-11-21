@@ -1,0 +1,40 @@
+<div class="container">
+    <div>
+        <h2>Ajouter un Pays :</h2>
+    </div>
+    <form>
+        <div hidden  class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID Pays</label>
+            <input type="text" [(ngModel)]="newPays.idPay" name="idPay" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom Pays</label>
+            <input type="text" [(ngModel)]="newPays.nomPay" name="nomPay" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>nombre de gouvernorat du Pays</label>
+            <input type="number" [(ngModel)]="newPays.gouvernorat" name="gouvernorat" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>langues Pays</label>
+            <input type="text" [(ngModel)]="newPays.langues" name="langues" class="form-control">
+        </div>
+      
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Continet</label>
+            <select class="form-control form-control-lg" id="idCat" name="idCat"
+            [(ngModel)]="newidCat">
+            <option *ngFor="let cats of continent" [value]="cats.idCat" >
+            {{cats.nomcont}}
+            </option>
+            </select>
+            </div>
+
+        <div class="mt-2">
+            <button type="submit" (click)="addPays()" class="btn btn-success">Ajouter</button>
+        </div>
+        <div>
+            <h2>{{ message }}</h2>
+        </div>
+    </form>
+</div>

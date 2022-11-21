@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id pays</th><th>Nom du pays</th> <th>nombre de gouvernorat</th>  <th> Continent</th></tr>
+    <tbody *ngFor="let pays of pays">
+    <tr>
+    <td>{{pays.idPay}}</td>
+    <td>{{pays.nomPay}}</td>
+    <td>{{pays.gouvernorat}}</td>
+  
+
+    <td><a class="btn btn-danger" (click)="supprimerPay(pays)">Supprimer</a></td>
+    <td><a class="btn btn-success" [routerLink]="['/updatePays',pays.idPay]">Modifier</a></td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>

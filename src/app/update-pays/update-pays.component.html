@@ -1,0 +1,37 @@
+<div class="container">
+    <div>
+        <h2>Modifier un Pays :</h2>
+    </div>
+    <form>
+        <div hidden class="col-sm-2 col-md-2 col-lg-2">
+            <label>ID idPay</label>
+            <input readonly type="text" [(ngModel)]="currentPays.idPay" name="idPay" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>nomPay </label>
+            <input type="text" [(ngModel)]="currentPays.nomPay" name="nomPay" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>nombre de gouvernorat</label>
+            <input type="number" [(ngModel)]="currentPays.gouvernorat" name="gouvernorat" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Pays langues</label>
+            <input type="text" [(ngModel)]="currentPays.langues" name="langues" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <select class="form-control form-control-lg" id="idCat" name="idCat"
+            [(ngModel)]="updatedidCat">
+            <option *ngFor="let cat of continent" [value]="cat.idCat" >
+            {{cat.nomcont}}
+            </option>
+            </select>
+            </div>
+
+
+
+        <div class="mt-2">
+            <button type="submit" (click)="updatePays()" class="btn btn-success">Modifer</button>
+        </div>
+    </form>
+</div>
