@@ -1,0 +1,38 @@
+<div class="container">
+
+        <!--<form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2 mt-2 ">
+                <label>Nom Continent en tapant</label>
+                <input class="form-control" #searchTerm (keyup)="onKeyUp(searchTerm.value)">
+                </div>
+            </form>-->
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2 mt-2 ">
+                <label>Nom Pays en tapant</label>
+                <input #nom [(ngModel)]="searchTerm" name="searchTerm" class="form-control" >
+                </div>
+                </form>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id pays</th>
+                    <th>Nom du pays</th>
+                    <th>nombre de gouvernorat</th>
+                    <th> Continent</th>
+                </tr>
+                <tbody *ngFor="let payy of payes | filter:searchTerm">
+                    <tr>
+                        <td>{{payy.idPay}}</td>
+                        <td>{{payy.nomPay}}</td>
+                        <td>{{payy.gouvernorat}}</td>
+                        <td> {{ payy.continent.nomcont}} </td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -37,10 +37,16 @@ export class PayService {
   updatePays(p: Pays) : Observable<Pays>{
    return this.http.put<Pays>(this.apiURL, p, httpOptions);
   }
-
- 
   listeContinent():Observable<ContinentWrapper>{
     return this.http.get<ContinentWrapper>(this.apiURLCat);
     }
- 
+
+  rechercherParContinent(idCat: number): Observable<Pays[]> {
+    const url = `${this.apiURL}/paycont/${idCat}`;
+    return this.http.get<Pays[]>(url);
+  }
+  rechercherParNom(nom: string):Observable< Pays[]> {
+    const url = `${this.apiURL}/paysByName/${nom}`;
+    return this.http.get<Pays[]>(url);
+    }
 }

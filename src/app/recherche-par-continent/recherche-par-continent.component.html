@@ -1,0 +1,35 @@
+<div class="container">
+
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <label>Categories </label>
+        <select class="form-control form-control-lg" id="idCat" name="idCat" [(ngModel)]="IdCat"
+            (change)="onChange()">
+            <option *ngFor="let cat of continent" value="{{cat.idCat}}">
+                {{cat.nomcont}}
+            </option>
+        </select>
+    </div>
+
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Id pays</th>
+                    <th>Nom du pays</th>
+                    <th>nombre de gouvernorat</th>
+                    <th> Continent</th>
+                </tr>
+                <tbody *ngFor="let payy of payes">
+                    <tr>
+                        <td>{{payy.idPay}}</td>
+                        <td>{{payy.nomPay}}</td>
+                        <td>{{payy.gouvernorat}}</td>
+                        <td> {{ payy.continent.nomcont}} </td>
+
+
+                       </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
