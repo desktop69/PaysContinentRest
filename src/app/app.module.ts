@@ -13,6 +13,8 @@ import { RechercheParContinentComponent } from './recherche-par-continent/recher
 import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ListeContinentsComponent } from './liste-continents/liste-continents.component';
+import { UpdateContinentsComponent } from './update-continents/update-continents.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     UpdatePaysComponent,
     RechercheParContinentComponent,
     RechercheParNomComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    ListeContinentsComponent,
+    UpdateContinentsComponent
   ],
   imports: [
     BrowserModule,

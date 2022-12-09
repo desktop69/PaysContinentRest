@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+        <app-update-continents [continentss]="updatedCont" 
+        (continentsUpdated)= "continentsUpdated($event)"
+        [ajout]="ajout"
+        > </app-update-continents>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom Continents</th>
+                        <th>surface en km  Continents</th>
+                        <th>nombre de population Continents</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let cat of continents">
+                    <tr>
+                        <td>{{cat.idCat}}</td>
+                        <td>{{cat.nomcont}}</td>
+                        <td>{{cat.km}}</td>
+                        <td>{{cat.population}}</td>
+                        <td><a class="btn btn-success" (click)="continentsUpdateMethode(cat)">Editer</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 })
 export class AddPaysComponent implements OnInit {
   newPays = new Pays();
-  message!: string;
   continent! : Continent[];
   newidCat! : number;
   newContinent! : Continent;
@@ -17,7 +16,6 @@ export class AddPaysComponent implements OnInit {
   constructor(private payServices: PayService,
     private router : Router) {
     
-
    }
 
   ngOnInit(): void {

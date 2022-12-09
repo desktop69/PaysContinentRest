@@ -49,4 +49,7 @@ export class PayService {
     const url = `${this.apiURL}/paysByName/${nom}`;
     return this.http.get<Pays[]>(url);
     }
+    AddContinent( cat: Continent):Observable<Continent>{
+      return this.http.post<Continent>(this.apiURLCat, cat, httpOptions);
+      }
 }

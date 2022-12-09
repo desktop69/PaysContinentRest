@@ -1,0 +1,27 @@
+<form >
+    <div [hidden]="ajout">
+        <label>ID Continents</label>
+        <input type="text" [(ngModel)]="continentss.idCat" name="idCat" class="form-control w-25">
+    </div>
+    <div>
+        <label>Nom Continents</label>
+        <input type="text" [(ngModel)]="continentss.nomcont" name="nomcont" class="form-control"
+            placeholder="Entrez un nom de Continents...">
+    </div>
+    <div>
+        <label>surface en km</label>
+        <input type="text" [(ngModel)]="continentss.km" name="km" class="form-control"
+            placeholder="Entrez surface en km de Continents...">
+    </div>
+ 
+    <div>
+        <label>surface en population</label>
+        <input type="text" [(ngModel)]="continentss.population" name="population" class="form-control"
+            placeholder="Entrez un nom de population...">
+    </div>
+ 
+    <div class="mt-2">
+        <button type="submit" [disabled]="!continentss.population" class="btn btn-success"
+            (click)="saveContinents()"> {{ajout ? 'Ajouter' : 'Modifier'}} </button>
+    </div>
+</form>

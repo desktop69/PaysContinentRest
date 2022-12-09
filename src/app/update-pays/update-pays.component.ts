@@ -26,17 +26,23 @@ updatedidCat! : number;
      
     }
 
+
+    SycroneDataPay(){
+      this.paysService.consulterPays(this.activatedRoute.snapshot.params['id']).subscribe(prod => {
+        this.currentPays = prod;
+      this.updatedidCat = this.currentPays.continent.idCat;
+    });
+      }
+    
+
+
   ngOnInit(): void {
    
-   this.paysService.listeContinent().subscribe(cats => {
+  this.paysService.listeContinent().subscribe(cats => {
     this.continent = cats._embedded.continents;
     console.log(cats);
-  });
-  this.paysService.consulterPays(this.activatedRoute.snapshot.params['id']).subscribe(prod => {
-    this.currentPays = prod;
-  this.updatedidCat = this.currentPays.continent.idCat;
-});
-
+    });
+    this.SycroneDataPay();
   }
 
 }

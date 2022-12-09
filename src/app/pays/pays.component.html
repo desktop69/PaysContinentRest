@@ -14,8 +14,6 @@
                         <td>{{pays.nomPay}}</td>
                         <td>{{pays.gouvernorat}}</td>
                         <td> {{ pays.continent.nomcont}} </td>
-
-
                         <td><a class="btn btn-danger" (click)="supprimerPay(pays)">Supprimer</a></td>
                         <td><a class="btn btn-success" [routerLink]="['/updatePays',pays.idPay]">Modifier</a></td>
                     </tr>
