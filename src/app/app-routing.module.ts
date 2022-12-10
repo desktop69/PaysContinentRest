@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddPaysComponent } from './add-pays/add-pays.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 import { ListeContinentsComponent } from './liste-continents/liste-continents.component';
+import { LoginComponent } from './login/login.component';
 import { PaysComponent } from './pays/pays.component';
 import { RechercheParContinentComponent } from './recherche-par-continent/recherche-par-continent.component';
 import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: "updatePays/:id", component: UpdatePaysComponent},
   {path: "rechercheParContinent", component : RechercheParContinentComponent},
   {path: "rechercheParNom", component : RechercheParNomComponent},
-  {path: "listeContinents", component : ListeContinentsComponent}
+  {path: "listeContinents", component : ListeContinentsComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'app-forbidden', component: ForbiddenComponent},
 ];
 
 @NgModule({

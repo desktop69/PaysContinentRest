@@ -18,6 +18,11 @@
                         <td><a class="btn btn-success" [routerLink]="['/updatePays',pays.idPay]">Modifier</a></td>
                     </tr>
                 </tbody>
+                <div class="d-flex align-items-end flex-column">
+                    <div class="mt-auto p-2"><mat-paginator [length]="4" [pageSize]="5"
+                        [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page">
+                        </mat-paginator></div>
+                </div>
             </table>
         </div>
     </div>

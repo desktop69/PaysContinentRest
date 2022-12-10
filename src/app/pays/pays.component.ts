@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Pays } from '../model/Pays.model';
 import { PayService } from '../services/pay.service';
+//import {MatPaginatorModule} from '@angular/material/paginator';
 
 @Component({
   selector: 'app-pays',
@@ -8,6 +9,10 @@ import { PayService } from '../services/pay.service';
 })
 export class PaysComponent implements OnInit {
   pays?: Pays[];
+  length = 50;
+  pageSize = 10;
+  pageIndex = 0;
+  pageSizeOptions = [5, 10, 25];
 
   constructor(private payServices: PayService) {
 

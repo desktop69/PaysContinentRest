@@ -3,8 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-binding',
   templateUrl: './binding.component.html',
-  styles: [
-  ]
+  styleUrls: ['./binding.component.css']
 })
 export class BindingComponent implements OnInit {
 // titre :String = "demo du data biding interpolation abcd";

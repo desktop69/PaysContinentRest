@@ -15,6 +15,10 @@ import { SearchFilterPipe } from './search-filter.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ListeContinentsComponent } from './liste-continents/liste-continents.component';
 import { UpdateContinentsComponent } from './update-continents/update-continents.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,14 +30,17 @@ import { UpdateContinentsComponent } from './update-continents/update-continents
     RechercheParNomComponent,
     SearchFilterPipe,
     ListeContinentsComponent,
-    UpdateContinentsComponent
+    UpdateContinentsComponent,
+    LoginComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,MatPaginatorModule,
+    BrowserAnimationsModule
     
   ],
   providers: [],
